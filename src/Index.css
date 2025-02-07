@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  text-align: left;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 50px 20px 20px;
+}
+
+.container.light {
+  background: linear-gradient(to bottom, #898989, blue);
+  color: black;
+}
+
+.container.dark {
+  background: linear-gradient(to bottom, #341539, #2c2d2d);
+  color: white;
+}
+
+.top-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1600px;
+  gap: 120px;
+  margin: 0 auto;
+}
+
+.profile-section {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: -60px;
+  margin-right: 40px;
+}
+
+.profile-img {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text-section {
+  flex: 2.5;
+  text-align: left;
+  max-width: 750px;
+  margin-left: -50px;
+}
+
+.text-section h2 {
+  font-size: 3.2rem;
+  max-width: 110%;
+}
+
+.text-section p {
+  font-size: 1.6rem;
+  max-width: 100%;
+}
+
+.faq-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.faq-item {
+  background-color: black;
+  padding: 20px;
+  border-radius: 25px;
+  color: white;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  width: 600px;
+}
+
+.faq-item:hover {
+  background-color: #3a3a3a;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.faq-answer {
+  display: none;
+  padding-top: 10px;
+  font-size: 1.4rem;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.project-slider-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev {
+  left: -10px;
+}
+
+.next {
+  right: -10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mode-toggle {
+  background-color: transparent;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.mode-toggle:hover {
+  transform: scale(1.1);
+}
+
+.language-toggle {
+  background-color: transparent;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.language-toggle:hover {
+  transform: scale(1.1);
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.project-header h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.project-header h3 {
+  font-size: 1.8rem;
+  color: #777;
+  margin: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.pagination-dot.active {
+  background-color: #333;
+}
