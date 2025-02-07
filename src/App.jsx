@@ -24,17 +24,17 @@ const FAQItem = ({ question, answer, className }) => {
 
 const projects = [
   {
-    img: "/ball.png",
+    img: "public/ball.png",
     link: "/public/projects/API-oppgave/index.html",
     name: "Pokeapi + Games",
   },
   {
-    img: "/cookie.png",
+    img: "public/cookie.png",
     link: "/index2.html",
     name: "Cookieclicker + React",
   },
   {
-    img: "/link.jpg",
+    img: "public/link.jpg",
     link: "/public/projects/Linkmover/index.html",
     name: "Zelda Eventlisteners",
   },
@@ -153,7 +153,7 @@ const App = () => {
       <div className="layout">
         <div className="profile-section">
           <img
-            src="/ben.jpg"
+            src="public/ben.jpg"
             alt="Profile"
             className="profile-img"
             loading="lazy"
