@@ -153,7 +153,7 @@ const App = () => {
       <div className="layout">
         <div className="profile-section">
           <img
-            src="ben.jpg"
+            src="`${process.env.PUBLIC_URL}/ball.png`"
             alt="Profile"
             className="profile-img"
             loading="lazy"
